@@ -2,6 +2,249 @@
   box-sizing: border-box;
 }
 
+body {
+  background: url("../img/background.jpg") fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  font-size: 1.55em;
+  font-weight: bold;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  background-color: rgba(95,118,133, 0.8);
+  height: 49px;
+  width: 100%;
+  z-index: 25;
+}
+
+.logo {
+  float: left;
+  height: inherit;
+  width: 75px;
+  padding: 0 1.25em 0;
+}
+
+.logo > img {
+  width: inherit;
+  height: inherit;
+}
+
+.navbars {
+  height: inherit;
+  width: 49px;
+  float: left;
+  position: relative;
+  padding-left: 2.75em;
+  padding-top: 0.9em;
+  visibility: hidden;
+}
+
+.navbars i {
+  font-size: 1.5em;
+  color: #FFFFFF;
+}
+
+.navbars i:hover {
+  color: #fff200;
+}
+
+.share {
+  float: right;
+  height: inherit;
+  padding-top: 1.25em;
+  text-transform: uppercase;
+}
+
+.share span {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: #FFFFFF;
+  font-size: 0.70em;
+  letter-spacing: 0.1em;
+}
+
+.share_close {
+  padding-left: 2.5em;
+  padding-right: 3.0em;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.reveal .fa {
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.share a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.icon:hover, .share_close:hover {
+  color: #fff200;
+}
+
+.menu {
+  width: 270px;
+  position: fixed;
+  left: 30px;
+  top: 100px;
+  z-index: 20;
+  margin-bottom: 2.5em;
+}
+
+.menu_meta {
+  padding-top: 0.75em;
+}
+
+.menu_meta p {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding-bottom: 0.5em;
+}
+
+.menu_detail {
+  background-color: #fff200;
+  padding: 2.25em 1.5em;
+}
+
+
+.scroll_up {
+  padding: 6px 0 1px;
+  text-align: center;
+  background: #2a2a2a;
+  color: #777;
+  cursor: pointer;
+  font-family: "voxicon",serif;
+  margin: 0;
+  line-height: 1;
+  position: relative;
+  font-size: 1.2em;
+}
+
+.scroll_up:hover {
+  color: #FFFFFF;
+}
+
+.cards_list {
+  width: 100%;
+  padding: 10px 15px 36px;
+  background: #313131;
+  position: relative;
+  overflow-y: auto;
+  list-style-image: none;
+  list-style-type: decimal;
+  color: #666;
+  display: block; 
+}
+
+.cards_list li {
+  font-size: 0.9em;
+  color: #aaa;
+  padding: 5px 3px;
+  margin: 1em 0 0 1.75em;
+  line-height: 1.5em;
+}
+
+.current {
+  color: #fff200 !important;
+}
+
+.main {
+  top: 100px;
+  position: relative;
+  background-color: #FFFFFF;
+  min-width: 600px;
+}
+
+.count_container {
+  background-color: #fff200;
+  width: 100%;
+  height: 35px;
+  position: relative;
+  float: left;
+  z-index: 1;
+  color: #888;
+}
+
+.count_container i {
+  font-size: 1.5em;
+  color: #777;
+}
+
+.card_left {
+  position: absolute;
+  width: 45px;
+  top: 5px;
+  left: 0;
+  padding-left: 1.75em;
+}
+
+.card_count {
+  text-align: center;
+  padding-top: 10px;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  width: 100%;
+  display: inline-block;
+}
+
+.card_right {
+  position: absolute;
+  width: 45px;
+  left: auto;
+  right: 0;  
+  top: 5px;
+  padding-right: 0.75em;
+}
+
+.wrapper {
+  margin: 4em;
+  min-height: 28em;
+}
+
+.wrapper h2 {
+  padding-top: 1.5em;
+  padding-bottom: 1.25em;
+}
+
+.wrapper p {
+  color: #666;
+  padding-bottom: 2em;
+  line-height: 1.5em;
+}
+
+.float_right {
+  float: right;
+  padding-left: 1em;
+}
+
+.float_right img {
+  height: 255px;
+  width: 255px;
+  background: #fff;
+  padding: 7px;
+  border: solid 1px #ddd;
+}
+
+
 .grid {
   width: 100%;
   max-width: 960px;
@@ -79,18 +322,6 @@
   width: 100%;
 }
 
-/* Coloring Code */
-.grid {
-    background-color: #999;
-}
-
-.row {
-    background-color: #FFF;
-}
-
-[class*="-col"] {
-    background-color: #EEE;
-}
 
 /* Column Offsets */
 .one-offset {
@@ -135,25 +366,4 @@
 
 .eleven-offset {
   margin-left: 91.54%;
-}
-
-
-@media all and (max-width: 768px) {
-  [class*="-col"] {
-    width: 100%;
-    margin-bottom: 1em;
-  }
-
-  .row:last-child > [class*="-col"]:last-child {
-    margin-bottom: 0;
-  }
-
-  [class*="-offset"] {
-    margin-left: 0;
-  }
-
-  .row:not(:last-child) {
-    margin: 0;
-  }
-
 }
