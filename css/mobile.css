@@ -37,15 +37,31 @@
   }
 
   .main {
-    width: 100%;
+    width: 90%;
+    left: 1.25em;
   }
 
   .share span {
-    visibility: hidden;
+    display: none;
+    clear: both;
+  }
+
+  .share_close {
+    padding-left: 1em;
+    padding-right: 2.0em;
   }
 
   .navbars {
     visibility: visible;
+  }
+
+  .wrapper {
+    margin: 2em;
+  }
+
+  .float_right {
+    float: none;
+    padding-left: 0em;
   }
 
   .row:last-child > [class*="-col"]:last-child {
@@ -60,4 +76,8 @@
     margin: 0;
   }  
 
+}
+
+@media screen and (max-width: 375) {
+  
 }
